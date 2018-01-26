@@ -1,6 +1,9 @@
 package com.guild.spring5webapp.didemo;
 
 import com.guild.spring5webapp.didemo.controllers.MyController;
+import com.guild.spring5webapp.didemo.controllers.springframework.ConstructorInjectedController;
+import com.guild.spring5webapp.didemo.controllers.springframework.PropertyInjectedController;
+import com.guild.spring5webapp.didemo.controllers.springframework.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,5 +17,9 @@ public class DiDemoApplication {
 		MyController controller = (MyController) context.getBean("myController");
 
 		controller.hello();
+
+        System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println(context.getBean(SetterInjectedController.class).sayHello());
+        System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
 	}
 }
