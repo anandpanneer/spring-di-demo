@@ -1,4 +1,4 @@
-package com.guild.spring5webapp.didemo.controllers;
+package com.guild.spring5webapp.didemo.controllers.manual;
 
 import com.guild.spring5webapp.didemo.service.GreetingService;
 
