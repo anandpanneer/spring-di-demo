@@ -1,6 +1,5 @@
 package com.guild.spring5webapp.didemo.controllers.manual;
 
-import com.guild.spring5webapp.didemo.controllers.manual.PropertyInjectedController;
 import com.guild.spring5webapp.didemo.service.GreetingsServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +17,7 @@ public class PropertyInjectedControllerTest {
 
     @Test
     public void testGreeting() {
-        assertEquals(GreetingsServiceImpl.GREETING_TEXT, propertyInjectedController.sayHello());
+        assertEquals("Have a good day 123!!!", propertyInjectedController.sayHello());
     }
 
 }
